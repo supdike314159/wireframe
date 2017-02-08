@@ -2,20 +2,21 @@ package com.wireframe.controller;
  
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.ui.ModelMap;
 import org.apache.log4j.Logger; 
  
 @Controller
+@RequestMapping(value = "/welcome")
 public class WireframeHome {
 
   static Logger log = Logger.getLogger(WireframeHome.class.getName());
  
-	@RequestMapping(value = "/")
-	public ModelAndView helloWorld() {
+  @RequestMapping(method = RequestMethod.GET)
+  public String helloWorld(ModelMap model) {
  
-		String message = "<br><div style='text-align:center;'>"
-				+ "<h3>Welcome to Wireframe 1.0</h3></div><br><br>";
-                log.info("@@@@@@@@@@@@@@@@@@@@@");
-		return new ModelAndView("welcome", "message", message);
-	}
+    model.addAttribute("message","Hello Wireframe");
+    return "welcome";
+  }
 }
