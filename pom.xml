@@ -9,6 +9,7 @@
   <url>http://maven.apache.org</url>
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <finalName>${project.artifactId}</finalName>
     <plugins>
       <plugin>
 	<artifactId>maven-compiler-plugin</artifactId>
