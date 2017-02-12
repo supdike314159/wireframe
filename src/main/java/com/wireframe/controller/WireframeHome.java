@@ -15,7 +15,7 @@ public class WireframeHome {
  
   @RequestMapping(method = RequestMethod.GET)
   public String helloWorld(ModelMap model) {
- 
+    log.info("@@@@@@@@");
     model.addAttribute("message","Hello Wireframe");
     return "welcome";
   }
