@@ -27,6 +27,12 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableTransactionManagement
 @ComponentScan("com.wireframe")
 @PropertySource("classpath:wireframe.properties")
+
+//Personal property file.  In Spring 4, if the file is not there, the app will start normally,
+//since we have ignoreResourceNotFound set properly.  Also, properties that exist in your personal
+//properties file that also exist in the main wireframe.properties file (on previous line) will take effect.
+//@PropertySource(value="classpath:${user.name}_wireframe.properties", ignoreResourceNotFound=true)
+
 //Pay your attention at @EnableJpaRepositories annotation. It enables usage of JPA repositories. 
 //The com.wireframe.repository package will be scanned to detect repositories. 
 //In the entityManagerFactory bean, it is determined that Hibernate will be used as JPA implementation.

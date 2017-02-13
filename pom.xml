@@ -26,7 +26,7 @@
     <resources>
       <resource>
         <directory>src/main/resources</directory>
-	<filtering>true</filtering>
+        <filtering>true</filtering>
       </resource>
     </resources>
   </build>
@@ -35,7 +35,7 @@
   <dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
-			<version>4.3.6.Final</version>
+			<version>5.2.7.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.validation</groupId>
@@ -50,7 +50,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.3.6.Final</version>
+			<version>5.2.7.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
