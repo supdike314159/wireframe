@@ -27,6 +27,7 @@
 <td><form:input path="status" /></td>
 <td><form:errors path="status" cssStyle="color: red;"/></td>
 </tr>
+
 <tr>
 <td><input type="submit" value="Edit" /></td>
 <td></td>

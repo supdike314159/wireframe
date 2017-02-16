@@ -1,5 +1,6 @@
 package com.wireframe.controller;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -37,9 +38,10 @@ public class EmployeeController {
          
         ModelAndView mav = new ModelAndView();
         String message = "New employee "+employee.getFirstName()+" "+employee.getLastName()+" was successfully created.";
-         
+        LocalDate currDate = LocalDate.now();
+        employee.setBirthDate(currDate); 
         employeeService.create(employee);
-        mav.setViewName("redirect:/index.html");
+        mav.setViewName("redirect:/list");
                  
         redirectAttributes.addFlashAttribute("message", message);   
         return mav;     

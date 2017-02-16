@@ -12,7 +12,7 @@
 <table style="text-align: center;" border="1px" cellpadding="0" cellspacing="0" >
 <thead>
 <tr>
-<th width="150px">Name</th><th width="25px">Status</th><th width="50px">actions</th>
+<th width="150px">Name</th><th width="25px">Status</th><th width="25px">Birth Date</th><th width="50px">actions</th>
 </tr>
 </thead>
 <tbody>
@@ -20,6 +20,7 @@
 <tr>
 <td>${employee.firstName} ${employee.lastName} }</td>
 <td>${employee.status}</td>
+<td>${employee.birthDate}</td>
 <td>
 <a href="${pageContext.request.contextPath}/employee/edit/${employee.id}">Edit</a><br/>
 <a href="${pageContext.request.contextPath}/employee/delete/${emplyee.id}">Delete</a><br/>
