@@ -41,7 +41,7 @@ public class EmployeeController {
         LocalDate currDate = LocalDate.now();
         employee.setBirthDate(currDate); 
         employeeService.create(employee);
-        mav.setViewName("redirect:/list");
+        mav.setViewName("redirect:/employee/list");
                  
         redirectAttributes.addFlashAttribute("message", message);   
         return mav;     
@@ -68,7 +68,7 @@ public class EmployeeController {
             @PathVariable Integer id,
             final RedirectAttributes redirectAttributes) throws EmployeeNotFound {
          
-        ModelAndView mav = new ModelAndView("redirect:/index.html");
+        ModelAndView mav = new ModelAndView("redirect:/employee/list");
         String message = "Employee was successfully updated.";
  
         employeeService.update(employee);
@@ -81,7 +81,7 @@ public class EmployeeController {
     public ModelAndView deleteEmployee(@PathVariable Integer id,
             final RedirectAttributes redirectAttributes) throws EmployeeNotFound {
          
-        ModelAndView mav = new ModelAndView("redirect:/index.html");        
+        ModelAndView mav = new ModelAndView("redirect:/employee/list");        
          
         Employee employee = employeeService.delete(id);
         String message = "The employee "+employee.getFirstName()+" "+employee.getFirstName()+" was successfully deleted.";

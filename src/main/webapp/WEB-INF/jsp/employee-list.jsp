@@ -18,17 +18,17 @@
 <tbody>
 <c:forEach var="employee" items="${employeeList}">
 <tr>
-<td>${employee.firstName} ${employee.lastName} }</td>
+<td>${employee.firstName} ${employee.lastName} </td>
 <td>${employee.status}</td>
 <td>${employee.birthDate}</td>
 <td>
 <a href="${pageContext.request.contextPath}/employee/edit/${employee.id}">Edit</a><br/>
-<a href="${pageContext.request.contextPath}/employee/delete/${emplyee.id}">Delete</a><br/>
+<a href="${pageContext.request.contextPath}/employee/delete/${employee.id}">Delete</a><br/>
 </td>
 </tr>
 </c:forEach>
 </tbody>
 </table>
-<a href="${pageContext.request.contextPath}/">Home page</a>
+<a href="${pageContext.request.contextPath}/employee/create">New Employee</a>
 </body>
 </html>
